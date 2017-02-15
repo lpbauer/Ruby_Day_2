@@ -84,7 +84,7 @@ class Car < Vehicle
   def initialize(year)
     @wheels = 4
     @year = year
-    # give Class a lights_on with default value false
+    @speed = 0
   end
 
   def wheels
@@ -99,6 +99,15 @@ end
 my_car = Car.new
 
 class Tesla < Car
+
+  def acceleration
+    @speed = @speed + 10
+  end
+
+  def braking
+    @speed = @speed - 7
+  end
+
 end
 my_tesla = Tesla.new
 
